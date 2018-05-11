@@ -1,0 +1,105 @@
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+# Date : WK14.36
+# Operation : Migration
+# Purpose : guiext service for VP
+allow mediaserver guiext-server:binder { transfer call };
+
+# Data : 2014/11/26
+# Operation : Camera display client
+# Purpose : for SVP secure memory allocation
+allow mediaserver proc_secmem:file { read write open};
+
+# Date : WK14.52
+# Operation : WVL1 IT
+# Purpose : SVP module operates secmem driver
+allow mediaserver mobicore_data_file:file getattr;
+allow mediaserver proc_secmem:file ioctl;
+allow mediaserver mobicore_data_file:file getattr;
+
+# Date: WK14.45
+# Operation : Migration
+# Purpose : HDCP
+allow mediaserver mobicore:unix_stream_socket connectto;
+allow mediaserver mobicore_data_file:dir search;
+allow mediaserver mobicore_data_file:file { getattr read open lock};
+allow mediaserver mobicore_user_device:chr_file { read write open ioctl};
+
+# Date: WK14.45
+# Operation : Migration
+# Purpose : HDCP
+allow mediaserver persist_data_file:dir { create write add_name search};
+allow mediaserver persist_data_file:file { read write create open getattr };
+
+# Date: WK14.44
+# Operation : Migration
+# Purpose : EVDO
+allow mediaserver statusd:unix_stream_socket connectto;
+
+# Date : WK15.03
+# Operation : Migration
+# Purpose : offloadservice
+allow mediaserver offloadservice_device:chr_file { read write ioctl open };
+
+# Date : WK15.32
+# Operation : Migration
+# Purpose : for control CPU during camera working flow
+allow mediaserver mtk_perf_service:service_manager find;
+
+# Date : WK15.38
+# Operation : Migration
+# Purpose : allow mediaserver to find pq_service
+allow mediaserver pq_service:service_manager { find };
+
+# Data : WK14.38
+# Operation : Migration
+# Purpose : WFD
+allow mediaserver surfaceflinger:dir search;
+allow mediaserver surfaceflinger:file { read open };
+
+# Data : WK14.47
+# Operation : Migration
+# Purpose : for WFD looper
+allow mediaserver custom_file:dir search;
+
+# Data : WK14.48
+# Operation : WFD
+# Purpose : For WFD scenario
+allow mediaserver untrusted_app_tmpfs:file write;
+
+# Date : WK14.49
+# Operation : WFD
+# Purpose : WFD notifies its status to thermal module
+allow mediaserver proc_thermal:file { write getattr open };
+#allow mediaserver thermal_manager_exec:file { x_file_perms read open };
+allow mediaserver proc_mtkcooler:file { read write open };
+allow mediaserver proc_mtktz:file { read write open };
+allow mediaserver proc_thermal:file { read write open };
+allow mediaserver thermal_manager_data_file:file setattr;
+
+# Date : WK15.11
+# Operation : SRS
+# Purpose : SRS
+#allow mediaserver system_data_file:file { w_file_perms };
+
+# Date : WK15.33
+# Operation : Migration
+# Purpose : ape playback need to access MtkCodecService service.
+allow mediaserver mtk_codec_service_service:service_manager find;
+
+# Date : WK15.44
+# Operation : Migration
+# Purpose : ancservice
+allow mediaserver ancservice_device:chr_file { read write ioctl open };
+
+# Date : WK14.36
+# Operation : Migration
+# Purpose : guiext service for VP
+binder_call(mediaserver, guiext-server)
+
+# Date : WK16.29
+# Operation : Migration
+# Purpose : Add permission for gpu access
+allow mediaserver dri_device:chr_file { read write open ioctl };

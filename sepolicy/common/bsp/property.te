@@ -1,0 +1,40 @@
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+#=============allow ccci_mdinit to start ccci_rpcd==============
+type ctl_ccci_rpcd_prop, property_type;
+type ctl_ccci2_rpcd_prop, property_type;
+
+#=============allow DM==============
+type persist_dm_prop, property_type, mtk_core_property_type;
+type ctl_rbfota_prop, property_type;
+
+#=============allow statusd==============
+type cdma_prop, property_type, mtk_core_property_type;
+
+#=============allow pppd ==============
+type pppd_gprs_prop, property_type, mtk_core_property_type;
+
+#=============allow wifi offload deamon  ==============
+type mtk_wod_prop, property_type, mtk_core_property_type;
+type persist_wod_prop, property_type, mtk_core_property_type;
+
+#=============allow teei deamon and init_thh daemon to set property ==============
+type soter_teei_prop, property_type, mtk_core_property_type;
+
+#=============allow log filter property==============
+type logfilter_prop, property_type, mtk_core_property_type;
+#type persist_logfilter_prop, property_type;
+
+#=============allow android log much property==============
+type logmuch_prop, property_type, mtk_core_property_type;
+
+#=============allow Netd property==============
+type mtk_net_ipv6_prop, property_type, mtk_core_property_type;
+
+#=============allow md_init property==============
+type mdmmonitor_prop, property_type, mtk_core_property_type;
+
+#==============allow set property=================
+type factory_prop, property_type, core_property_type;

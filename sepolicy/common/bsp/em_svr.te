@@ -1,0 +1,8 @@
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+#Date : 2016/11/15
+#Purpose: for telephony log settings
+set_prop(em_svr, log_tag_prop)
+set_prop(em_svr, logmuch_prop)

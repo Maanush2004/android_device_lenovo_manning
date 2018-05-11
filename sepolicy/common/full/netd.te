@@ -1,0 +1,30 @@
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+
+# Date : WK14.42
+# Operation : Migration 
+# Purpose : for VoLTE L early bring up and first call
+# Owner : Frank-th Chen
+allow netd volte_stack:fd use;
+allow netd volte_stack:tcp_socket { read write setopt getopt };
+allow netd volte_stack:udp_socket { read write setopt getopt };
+
+# Date : W14.53
+# Operation : Migration
+# Purpose :  For volte_imcb ut
+# Owner Ssu-hsien wu
+allow netd volte_imcb:fd use;
+allow netd volte_imcb:tcp_socket { read write };
+allow netd volte_imcb:tcp_socket getopt;
+allow netd volte_imcb:tcp_socket setopt;
+
+# for vtservice connection
+allow netd vtservice:fd use;
+allow netd vtservice:udp_socket {read write setopt getopt};
+
+#============= netd <-> volte_ua ==============
+#Owner: Tsung-kun shih
+allow netd volte_ua:fd use;
+allow netd volte_ua:udp_socket {read write setopt getopt};

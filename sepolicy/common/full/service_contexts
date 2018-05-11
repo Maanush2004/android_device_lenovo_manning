@@ -1,0 +1,31 @@
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+# System Server Services
+anrmanager                  u:object_r:mtk_anrmanager_service:s0
+search_engine               u:object_r:search_service:s0
+mtkhdmi                     u:object_r:mtk_hdmi_service:s0
+audioprofile                u:object_r:audio_service:s0
+uniservice-pack             u:object_r:mtk_usp_service:s0
+data_shaping                u:object_r:mtk_data_shaping_service:s0
+running_booster        u:object_r:mtk_running_booster_service:s0
+TestAmPolicyMakerService    u:object_r:mtk_test_ampolicymaker_service:s0
+
+# Other Services
+CrossMountManagerService    u:object_r:mtk_crossmount_service:s0
+hotknot_service             u:object_r:mtk_hotknot_service:s0
+hotknotnativeservice        u:object_r:hotknot_native_service:s0
+consumer_ir_extra 	    u:object_r:mtk_consumerir_service:s0
+PPLAgent                    u:object_r:ppl_agent_service:s0
+program_binary              u:object_r:program_binary_service:s0
+terservice                  u:object_r:terservice_service:s0
+media.VTS                   u:object_r:vtservice_service:s0
+vie_command                 u:object_r:vie_command_service:s0
+wfo                         u:object_r:radio_service:s0
+GbaService                  u:object_r:radio_service:s0
+iphonesubinfotedongle       u:object_r:radio_service:s0
+isubtedongle                u:object_r:radio_service:s0
+simphonebooktedongle        u:object_r:radio_service:s0
+ismstedongle                u:object_r:radio_service:s0
+tedongleservice             u:object_r:radio_service:s0

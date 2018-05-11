@@ -1,0 +1,22 @@
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+# System Server Services
+type mtk_anrmanager_service, app_api_service, system_server_service, service_manager_type;
+type mtk_hdmi_service, app_api_service, system_server_service, service_manager_type;
+type mtk_data_shaping_service, app_api_service, system_server_service, service_manager_type;
+type mtk_running_booster_service, app_api_service, system_server_service, service_manager_type;
+type mtk_test_ampolicymaker_service, app_api_service, system_server_service, service_manager_type;
+
+# Other Services
+type mtk_crossmount_service, service_manager_type;
+type mtk_hotknot_service, service_manager_type;
+type hotknot_native_service, service_manager_type;
+type mtk_consumerir_service, service_manager_type;
+type ppl_agent_service, service_manager_type;
+type program_binary_service, service_manager_type;
+type terservice_service, service_manager_type;
+type vtservice_service, service_manager_type;
+type vie_command_service, service_manager_type;
+type mtk_usp_service, app_api_service, system_server_service, service_manager_type;

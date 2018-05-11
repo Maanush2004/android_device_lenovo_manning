@@ -1,0 +1,20 @@
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+# System Server Services
+type mtk_mobile_service, app_api_service, system_server_service, service_manager_type;
+type mtk_msg_monitor_service, app_api_service, system_server_service, service_manager_type;
+#type mtk_recovery_service, app_api_service, system_server_service, service_manager_type;
+type mtk_perf_service, app_api_service, system_server_service, service_manager_type;
+type mtk_epdg_service, app_api_service, system_server_service, service_manager_type;
+type mtk_rns_service, app_api_service, system_server_service, service_manager_type;
+
+# Other Services
+type guiext-server_service, service_manager_type;
+type ota_agent_service, service_manager_type;
+type pq_service, service_manager_type;
+type gas_srv_service, service_manager_type;
+type dm_agent_binder_service, service_manager_type;
+type aal_service, service_manager_type;
+

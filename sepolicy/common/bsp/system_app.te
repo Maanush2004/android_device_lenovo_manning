@@ -1,0 +1,108 @@
+# ==============================================
+# MTK Policy Rule
+# =================
+
+# Date : 2014/11/19
+# Operation: SQC
+# Purpose: [Settings][RenderThread][operate device file failed]
+# Package: com.android.settings
+allow system_app proc_secmem:file rw_file_perms;
+
+# Date: 2014/08/21
+# Stage: BaseUT
+# Purpose: [AtciService][Atci Service will use atci_serv_fw_socket to connect to atci_service which in native layer]
+# Package Name: com.mediatek.atci.service
+allow system_app atci_serv_fw_socket:sock_file write;
+allow system_app atci_service:unix_stream_socket connectto;
+
+# Date: 2015/04/08
+# Stage: IT
+# Purpose: [RCS][RCS will use rcs_ua_proxy to connect to volte_rcs_ua which in native layer]
+# Package Name: com.orangelasb.rcs:core
+allow system_app rcs_ua_proxy_socket:sock_file write;
+allow system_app volte_rcs_ua:unix_stream_socket connectto;
+
+# Date : 2015/06/12
+# Operation: TEEI integration
+# Purpose: access for fp device and client device of TEEI
+# Package: com.microtrust.mtee
+allow system_app teei_fp_device:chr_file rw_file_perms;
+allow system_app teei_client_device:chr_file r_file_perms;
+
+# Date: 2014/08/01
+# Operation: BaseUT
+# Purpose: [Settings][Settings used list views need velocity tracker access touch dev]
+# Package: com.android.settings
+allow system_app touch_device:chr_file { read ioctl open };
+
+# Date: 2014/08/29
+# Stage: BaseUT
+# Purpose: [BatteryWarning][View update graphics]
+# Package Name: com.mediatek.batterywarning
+allow system_app guiext-server:binder { transfer call };
+
+# Date : 2014/11/17
+# Operation: SQC
+# Purpose : [Settings][Battery module will call batterystats API, and it will read /sys/kernel/debug/wakeup_sources]
+# Package: com.android.settings
+#allow system_app debugfs:file r_file_perms;
+
+# Date : 2014/11/20
+# Operation: SQC
+# Purpose: [Settings][Developer options module will communicate with all Services through binder call]
+# Package: com.android.settings
+binder_call(system_app, MtkCodecService)
+
+# Date : 2014/11/26
+# Operation: SQC
+# Purpose: [Settings][Browser][warning kernel API'selinux enforce violation:sdcardd' when do stress test with ' AT_ST_Browser_Test.rar']
+# Package: com.android.settings
+allow system_app platform_app_tmpfs:file write;
+
+# Date: 2014/08/04
+# Stage: BaseUT
+# Purpose: [MTKThermalManager][View thermal zones and coolers, and change thermal policies]
+# Package Name: com.mediatek.mtkthermalmanager
+allow system_app apk_private_data_file:dir getattr;
+allow system_app asec_image_file:dir getattr;
+allow system_app dontpanic_data_file:dir getattr;
+allow system_app drm_data_file:dir getattr;
+allow system_app install_data_file:file getattr;
+allow system_app lost_found_data_file:dir getattr;
+allow system_app media_data_file:dir getattr;
+allow system_app property_data_file:dir getattr;
+allow system_app shell_data_file:dir search;
+allow system_app thermal_manager_exec:file { read execute open execute_no_trans getattr};
+allow system_app proc_thermal:dir search;
+allow system_app proc_thermal:file { read getattr open write };
+allow system_app proc_mtkcooler:dir search;
+allow system_app proc_mtkcooler:file { read getattr open write };
+allow system_app proc_mtktz:dir search;
+allow system_app proc_mtktz:file  { read getattr open write };
+allow system_app proc_slogger:file { read getattr open write };
+
+# Date: 2015/07/24
+# Stage: Migration
+# Purpose: [MTKThermalManager][View thermal zones and coolers, and change thermal policies]
+# Package Name: com.mediatek.mtkthermalmanager
+allow system_app thermal_manager_data_file:file { open getattr read write create};
+allow system_app thermal_manager_data_file:file { open setattr lock };
+allow system_app thermal_manager_data_file:dir { search getattr open read write setattr add_name };
+
+# Date: 2016/04/07
+# Stage: Migration
+# Purpose: [BtLogger] btTool log reduction detect
+# Package Name: com.mediatek.bluetooth.dtt
+allow system_app logmuch_prop:property_service set;
+
+# Date: 2016/11/10
+# Purpose: [MDM] Modem monitor config
+# Package Name: com.mediatek.mdmconfig
+set_prop(system_app, mdmmonitor_prop);
+
+# Date : 2016/07/29
+# Purpose : Gain permission to system apps read sdcard file for auto sanity case.
+userdebug_or_eng(`
+allow system_app media_rw_data_file:dir { read open };
+allow system_app media_rw_data_file:file { read open };
+')

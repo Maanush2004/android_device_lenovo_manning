@@ -1,0 +1,51 @@
+type goodixfingerprintd, domain;
+
+init_daemon_domain(goodixfingerprintd)
+
+
+# need to find KeyStore and add self
+allow goodixfingerprintd goodixfingerprintd_service:service_manager { add find };
+
+# allow HAL module to read dir contents
+allow goodixfingerprintd goodixfingerprintd_data_file:file { create_file_perms };
+
+file_type_auto_trans(goodixfingerprintd,system_data_file,goodixfingerprintd_data_file);
+
+# For permissions checking
+binder_use(goodixfingerprintd)
+binder_call(goodixfingerprintd, system_server);
+binder_call(goodixfingerprintd, fingerprintd);
+binder_call(goodixfingerprintd, system_app);
+
+# goodix fingerprint
+allow goodixfingerprintd permission_service:service_manager find;
+allow goodixfingerprintd self:process execmem;
+allow goodixfingerprintd fuse:dir create_dir_perms;
+allow goodixfingerprintd fuse:file create_file_perms;
+allow goodixfingerprintd self:capability { dac_override dac_read_search };
+
+# Access fingerprint devices at all.
+allow goodixfingerprintd goodixfingerprintd_device:chr_file rw_file_perms;
+
+# for beanpod teei_fp_device
+allow goodixfingerprintd teei_fp_device:chr_file rw_file_perms;
+
+#for netlink use
+allow goodixfingerprintd self:netlink_socket { read bind create write getattr setopt };
+
+allow goodixfingerprintd fingerprint_service:service_manager { find };
+
+# allow sdcard access right
+allow goodixfingerprintd media_rw_data_file:dir { search write add_name };
+allow goodixfingerprintd media_rw_data_file:file { create write open read getattr };
+
+#allow for power manager
+allow goodixfingerprintd power_service:service_manager { find };
+allow goodixfingerprintd goodixfingerprintd:capability { net_admin };
+
+#goodixfingerpri: type=1400 audit(0.0:21): avc: denied { getattr } for path="/vendor" dev="rootfs" ino=5427 #scontext=u:r:goodixfingerprintd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+
+userdebug_or_eng(`
+# the next line is not used in beanpod, but it will be needed defaultly in factory test
+allow goodixfingerprintd kernel:system module_request;
+')

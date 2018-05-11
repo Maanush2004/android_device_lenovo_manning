@@ -1,0 +1,14 @@
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+# Purpose : Setup Connection with GPS to obtain GPS position for Fused Location Provider framework
+allow mtkFlpDaemon mnld:unix_dgram_socket sendto;
+allow mtkFlpDaemon mnld_data_file:dir create_dir_perms;
+allow mtkFlpDaemon mnld_data_file:sock_file create_file_perms;
+
+# Date : W16.11
+# Operation : Feature Developing
+# Purpose : Setup socket connection with MPED to obtain Pedestrian Dead reckoning data from MPED
+allow mtkFlpDaemon MPED_data_file:sock_file create_file_perms;
+allow mtkFlpDaemon MPED:unix_dgram_socket sendto;

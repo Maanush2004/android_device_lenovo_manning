@@ -1,0 +1,29 @@
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+# File types
+type cmas_file, file_type, data_file_type;
+type lannetmngrd_socket, file_type;
+
+# Socket types
+type volte_imcb_socket, file_type;
+type volte_ua_socket, file_type;
+type volte_stack_socket, file_type;
+
+# for sensor
+type sysfs_gsensor_file, file_type,sysfs_type;
+type sysfs_msensor_file, file_type,sysfs_type;
+type bmm050_sensor_log_file, file_type,data_file_type;
+
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+# Date: W1550
+# Operator: eMBMS middleware integration
+# Purpose: allow eMBMS middleware to send AT-command
+type rild_embms_socket, file_type, mlstrustedobject;
+
+# eMBMS VzW SDK file
+type embms_library_file, file_type, data_file_type;

@@ -1,0 +1,55 @@
+# ==============================================
+# MTK Policy Rule
+# ============
+
+# Date : WK14.36
+# Operation : Migration
+# Purpose : for mtkrild and viarild
+allow radio rilproxy:unix_stream_socket connectto;
+
+
+allow radio dm_agent_binder:binder call;
+
+
+# Date : WK14.36
+# Operation : Migration
+# Purpose : for mtkrild and viarild
+allow radio viarild:unix_stream_socket connectto;
+allow radio statusd:unix_stream_socket connectto;
+
+# Date : WK16.09
+# Operation : Migration for SWO policy package survey
+allow radio rild_via_socket:sock_file write;
+allow radio rild_mal_socket:sock_file write;
+allow radio rild_mal_at_socket:sock_file write;
+allow radio rild_mal_md2_socket:sock_file write;
+allow radio rild_mal_at_md2_socket:sock_file write;
+
+# Date : 2015/01/21
+# Operation : IT
+# Purpose : C2K rild
+allow radio rild_atci_md2_socket:sock_file write;
+allow radio rild_atci_c2k_socket:sock_file write;
+allow radio rilproxy_atci_socket:sock_file write;
+
+# Date : 2014/10/16
+# Operation : IT
+# Purpose : for TTLIA apk connect to rild_atci by mtkrild process
+allow radio rild_atci_socket:sock_file write;
+# C2K System Property
+allow radio cdma_prop:property_service set;
+
+# Date : WK15.43 2015/10/21
+# Operation : MDM IT with Swift app
+# Purpose : for app labled by radio to connenct to md_monitor
+allow radio md_monitor:unix_stream_socket connectto;
+
+# Date : 2016/12/1
+# Operation : MDM IT with Swift app
+# Purpose : for app labled by radio to auto start md_monitor
+set_prop(radio, mdmmonitor_prop);
+
+# Date : WK14.38 2016/06/28
+# Operation : Migration
+# Purpose : for engineermode
+allow radio guiext-server:binder { transfer call };

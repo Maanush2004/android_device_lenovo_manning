@@ -1,0 +1,22 @@
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+
+# Date : WK15.29
+# Operation : Feature Developing
+# Purpose : Setup Connection with GPS for sensor aiding data exchange
+allow MPED mnld_data_file:dir create_dir_perms;
+allow MPED mnld_data_file:sock_file create_file_perms;
+allow MPED mnld:unix_dgram_socket sendto;
+
+# Date : WK15.34
+# Operation : Feature Developing
+# Purpose : Add permission for mnld fifo file for rapid exchange of sensor aiding data with MPED
+allow MPED mnld_data_file:fifo_file rw_file_perms;
+
+# Date : W16.11
+# Operation : Feature Developing
+# Purpose : Setup socket connection with FLP to support Pedestrian Dead Reckoning feature in FLP
+allow MPED mtkFlpDaemon_data_file:sock_file create_file_perms;
+allow MPED mtkFlpDaemon:unix_dgram_socket sendto;

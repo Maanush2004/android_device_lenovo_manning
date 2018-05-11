@@ -1,0 +1,12 @@
+# ==============================================
+# Policy File of /system/bin/viarild Executable File 
+
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+#For MAL MFI
+allow viarild mtkmal:unix_stream_socket connectto;
+allow statusd mtkmal:unix_stream_socket connectto;
+allow statusd mal_mfi_socket:sock_file write;
+

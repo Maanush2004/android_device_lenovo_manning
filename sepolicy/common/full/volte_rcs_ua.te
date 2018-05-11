@@ -1,0 +1,17 @@
+# ==============================================
+# Policy File of /system/bin/volte_rcs_ua Executable File 
+
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+# Date : WK14.42
+# Operation : Migration 
+# Purpose : for VoLTE L early bring up and first call
+allow volte_rcs_ua volte_stack:unix_stream_socket connectto;
+
+# Date : 2015/11/5
+# Operation : M Migration 
+# Purpose : For rcs ua connect to stack by local socket
+unix_socket_connect(volte_rcs_ua, volte_stack, volte_stack)
+

@@ -1,0 +1,11 @@
+# ==============================================
+# Policy File of /system/bin/wfca Executable File 
+
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+# Date : 2015/06/25
+# Purpose : for UA socket pass
+allow wfca volte_ua:fd use;
+allow wfca volte_ua:udp_socket {read write setopt getattr getopt shutdown};

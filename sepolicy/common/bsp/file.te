@@ -1,0 +1,35 @@
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+# File types
+type md_monitor_data_file, file_type, data_file_type;
+
+# Socket types
+type statusd_socket, file_type;
+type rilproxy_atci_socket, file_type;
+type atci_service_socket, file_type;
+
+# TEEI data file
+type teei_data_file, file_type, data_file_type;
+type teei_thh_data_file, file_type, data_file_type;
+# android log too much data/misc/log
+type logmuch_data_file, file_type, data_file_type;
+
+#20141222 Add EPDG socket usage
+type wod_ipsec_conf_file, file_type, data_file_type;
+type wod_apn_conf_file, file_type, data_file_type;
+type wod_action_socket, file_type;
+type wod_sim_socket, file_type;
+type wod_ipsec_socket, file_type;
+type wod_dns_socket, file_type;
+
+# Date : WK16.35
+# Operation : untrusted_app support direct-coredump abort message
+# Purpose :
+# avc: denied { write } for name="aee_interim" dev="dm-0" ino=8236
+# scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:coredump_file:s0
+# tclass=dir permissive=0
+userdebug_or_eng(`
+  typeattribute coredump_file mlstrustedobject;
+')

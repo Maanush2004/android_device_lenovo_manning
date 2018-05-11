@@ -1,0 +1,129 @@
+# ==============================================
+# MTK Policy Rule
+# ============
+
+# Date : WK14.32
+# Operation : Migration
+# Purpose : for wifi p2p functionality
+allow system_server dhcp_data_file:dir rw_dir_perms;
+allow system_server dhcp_data_file:file create_file_perms;
+
+# Date : WK14.34
+# Operation : Migration
+# Purpose : for WFD functionality
+allow system_server media_wfd_prop:property_service set;
+
+# Date : WK14.37
+# Operation : Migration
+# Purpose : for relabeling files in /data/anr/ created at bootup
+allow system_server anr_data_file:file relabelto;
+
+# Date : WK14.39
+# Operation : Migration
+# Purpose : for operate HDMI device
+allow system_server graphics_device:chr_file r_file_perms;
+
+# Date: WK14.40
+# Operation : Migration
+# Purpose : for ACTION_PREBOOT_IPO intent in ipo boot
+binder_call(system_server, ipod)
+
+# Date: wk14.40
+# Operation : SQC
+# Purpose : [ALPS01756200] wwop boot up fail
+allow system_server custom_file:dir r_dir_perms;
+allow system_server custom_file:file r_file_perms;
+
+# Date: WK14.41
+# Operation : Migration
+# Purpose : boost thread to RT
+allow system_server surfaceflinger:process { setsched getsched };
+
+# Date: WK14.41
+# Operation : Migration
+# Purpose : allow system_server to start ipod
+allow system_server ctl_ipod_prop:property_service set;
+
+# Date: WK14.43
+# Operation : Migration
+# Purpose : for bring up
+allow system_server anr_data_file:dir relabelfrom;
+
+# Date : WK15.02
+# Operation : 120Hz Feature SQC
+# Purpose : for 120Hz Smart Switch
+allow system_server mtk_rrc_device:chr_file rx_file_perms;
+
+# Date : WK15.37
+# Operation : Feature developing
+# Purpose : For DHCPv6 renew procedure,
+#           system service needs to notify native dhcp6c process
+allow system_server dhcp6c:process signal;
+
+# Date : WK15.38
+# Operation : Bug fix
+# Purpose : Allow P2P framework to read MAC via nvram_agent_service
+allow system_server nvram_agent_service:service_manager find;
+
+# Date : WK16.20
+# Operation : Migration
+# Purpose : Allow system server to execute "rm r /data/piggybank"
+allow system_server toolbox_exec:file x_file_perms;
+
+# Date: W16.17
+# Operator: VzW SDK library preloaded
+# Purpose: comply with Vzw eMBMS operator requirement
+allow system_server embms_library_file:dir search;
+
+# Date : WK16.18
+# Operation : new feature
+# Purpose : allow uniservice-pack to set property as doing feature customization
+# property service
+allow system_server usp_prop:property_service set;
+allow system_server mtk_volte_prop:property_service set;
+allow system_server mtk_wfc_prop:property_service set;
+allow system_server mtk_vt_prop:property_service set;
+
+# Date: W16.21
+# Operation : Migration
+# Purpose : Allow system server to read/write /sys/kernel/debug/binder/* for ANR mechanism
+allow system_server debugfs_binder:file rw_file_perms;
+
+# Date: W16.25
+# Operation : Migration
+# Purpose : Allow system server to read/write /d/ged/hal/* for GED operations
+allow system_server debugfs_ged:dir rw_dir_perms;
+allow system_server debugfs_ged:file rw_file_perms;
+
+# Date: W16.27
+# Operation : Carrier Express Pack: new feature
+# Purpose : Allow system server to open/read/write ioctl for screen freeze/unfreeze operations
+allow system_server graphics_device:chr_file { open read write ioctl };
+
+# Date:W16.28
+# Operation : Migration
+# Purpose : Allow system server to read/write /sys/kernel/debug/tracing/* for ANR mechanism
+allow system_server debugfs_tracing:file rw_file_perms;
+
+# Date:W16.34
+# Operation : Migration
+# Purpose : Allow system server to read /sys/kernel/debug/shrinker for memory debugging information
+allow system_server debugfs_shrinker_debug:file r_file_perms;
+
+# Date : WK16.34
+# Operation : Migration
+# Purpose : Play tone for alert
+allow system_server cmas_file:dir { getattr read open search};
+allow system_server cmas_file:file { getattr read open};
+
+# Date: W16.35
+# Operation : Carrier Express Pack: bug fix - ALPS02862154
+# Purpose : Allow system server to open/read/write ioctl for sending ccci to enter/leave deep flight
+allow system_server ccci_device:chr_file rw_file_perms;
+
+# Date: W16.37
+# Operation : Carrier Express Pack: bug fix - ALPS02892994
+# Purpose : Allow system server to set property ril eboot, splitted usp prop to usp srv prop
+allow system_server usp_srv_prop:property_service set;
+allow system_server radio_prop:property_service set;
+allow system_server cdma_prop:property_service set;

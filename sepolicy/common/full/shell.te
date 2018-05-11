@@ -1,0 +1,21 @@
+# ==============================================
+# MTK Policy Rule
+# ============
+
+# Date : WK14.XX
+# Operation : Migration
+# Purpose : for exec labels defined by mtk
+allow shell stp_dump3_exec:file rx_file_perms;
+allow shell bmm050d_exec:file rx_file_perms;
+allow shell mc6420d_exec:file rx_file_perms;
+allow shell ppl_agent_exec:file rx_file_perms;
+allow shell atcp_exec:file rx_file_perms;
+allow shell lannetmngrd_exec:file rx_file_perms;
+allow shell s62xd_exec:file rx_file_perms;
+allow shell ami304d_exec:file rx_file_perms;
+allow shell memsicd_exec:file rx_file_perms;
+allow shell istd8303_exec:file rx_file_perms;
+allow shell matv_exec:file rx_file_perms;
+allow shell dmlog_exec:file rx_file_perms;
+allow shell gsm0710muxdmd2_exec:file rx_file_perms;
+allow shell mtkrildmd2_exec:file rx_file_perms;

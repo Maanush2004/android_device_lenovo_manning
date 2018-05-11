@@ -1,0 +1,9 @@
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+# Date : WK14.33
+# Operation : Bugreport UT
+# Purpose : add dumpstate policy rule
+allow dumpstate GoogleOtaBinder:binder call;
+

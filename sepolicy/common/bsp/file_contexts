@@ -1,0 +1,87 @@
+
+#############################
+# Data files
+#
+/data/app/mcRegistry(/.*)? u:object_r:mobicore_data_file:s0
+/data/misc/mcRegistry(/.*)? u:object_r:mobicore_data_file:s0
+
+/data/misc/log(/.*)? u:object_r:logmuch_data_file:s0
+/data/thh(/.*)? u:object_r:teei_data_file:s0
+/data/misc/thh(/.*)? u:object_r:teei_thh_data_file:s0
+/data/misc/aee_interim(/.*)? u:object_r:coredump_file:s0
+/data/ipsec(/.*)? u:object_r:wod_ipsec_conf_file:s0
+/data/ipsec/wo(/.*)? u:object_r:wod_apn_conf_file:s0
+
+##########################
+# Devices
+#
+/dev/mobicore u:object_r:mobicore_admin_device:s0
+/dev/mobicore-user u:object_r:mobicore_user_device:s0
+/dev/t-base-tui u:object_r:mobicore_tui_device:s0
+
+/dev/socket/rcs_ua_proxy(/.*)? u:object_r:rcs_ua_proxy_socket:s0
+/dev/socket/statusd u:object_r:statusd_socket:s0
+/dev/socket/rilproxy-mal(/.*)? u:object_r:rild_mal_socket:s0
+/dev/socket/rilproxy-atci(/.*)? u:object_r:rilproxy_atci_socket:s0
+/dev/socket/atci-service(/.*)? u:object_r:atci_service_socket:s0
+/dev/socket/wod_action(/.*)? u:object_r:wod_action_socket:s0
+/dev/socket/wod_sim(/.*)? u:object_r:wod_sim_socket:s0
+/dev/socket/wod_ipsec(/.*)? u:object_r:wod_ipsec_socket:s0
+/dev/socket/wod_dns(/.*)? u:object_r:wod_dns_socket:s0
+
+/dev/teei_config u:object_r:teei_config_device:s0
+/dev/teei_client u:object_r:teei_client_device:s0
+/dev/tz_vfs u:object_r:teei_vfs_device:s0
+/dev/emmcrpmb0 u:object_r:teei_rpmb_device:s0
+/dev/teei_fp u:object_r:teei_fp_device:s0
+/dev/ut_keymaster u:object_r:ut_keymaster_device:s0
+/dev/dri/card0 u:object_r:dri_device:s0
+#############################
+# sysfs files
+#
+
+
+#############################
+# System files
+#
+/(system\/vendor|vendor)/bin/GoogleOtaBinder u:object_r:GoogleOtaBinder_exec:s0
+/(system\/vendor|vendor)/bin/rilproxy u:object_r:rilproxy_exec:s0
+/(system\/vendor|vendor)/bin/dm_agent_binder u:object_r:dm_agent_binder_exec:s0
+
+/(system\/vendor|vendor)/bin/akmd8975 u:object_r:akmd8975_exec:s0
+/(system\/vendor|vendor)/bin/atci_service u:object_r:atci_service_exec:s0
+/(system\/vendor|vendor)/bin/atcid u:object_r:atcid_exec:s0
+/(system\/vendor|vendor)/bin/batterywarning u:object_r:batterywarning_exec:s0
+/(system\/vendor|vendor)/bin/dhcp6c u:object_r:dhcp6c_exec:s0
+/(system\/vendor|vendor)/bin/ged_srv u:object_r:ged_srv_exec:s0
+/(system\/vendor|vendor)/bin/memsicd3416x u:object_r:memsicd3416x_exec:s0
+/(system\/vendor|vendor)/bin/pq u:object_r:pq_exec:s0
+/(system\/vendor|vendor)/bin/sn u:object_r:sn_exec:s0
+/(system\/vendor|vendor)/bin/thermal u:object_r:thermal_exec:s0
+/(system\/vendor|vendor)/bin/thermald u:object_r:thermald_exec:s0
+/(system\/vendor|vendor)/bin/init_thh u:object_r:init_thh_service_exec:s0
+/(system\/vendor|vendor)/bin/epdg_wod u:object_r:epdg_wod_exec:s0
+/(system\/vendor|vendor)/bin/mcDriverDaemon u:object_r:mobicore_exec:s0
+/(system\/vendor|vendor)/bin/aal u:object_r:aal_exec:s0
+/(system\/vendor|vendor)/bin/kpoc_charger u:object_r:kpoc_charger_exec:s0
+/(system\/vendor|vendor)/bin/launchpppoe u:object_r:launchpppoe_exec:s0
+/(system\/vendor|vendor)/bin/mmp u:object_r:mmp_exec:s0
+/(system\/vendor|vendor)/bin/mpud6050 u:object_r:mpud6050_exec:s0
+/(system\/vendor|vendor)/bin/resize2fs  --  u:object_r:resize_exec:s0
+/(system\/vendor|vendor)/bin/resize_ext4  --  u:object_r:resize_exec:s0
+/(system\/vendor|vendor)/bin/volte_rcs_ua u:object_r:volte_rcs_ua_exec:s0
+/(system\/vendor|vendor)/bin/wfca u:object_r:wfca_exec:s0
+/(system\/vendor|vendor)/bin/ipsec u:object_r:ipsec_exec:s0
+/(system\/vendor|vendor)/bin/charon u:object_r:charon_exec:s0
+/(system\/vendor|vendor)/bin/starter u:object_r:starter_exec:s0
+/(system\/vendor|vendor)/bin/stroke u:object_r:stroke_exec:s0
+/(system\/vendor|vendor)/bin/teei_daemon u:object_r:teei_daemon_exec:s0
+/(system\/vendor|vendor)/bin/pppd_btdun u:object_r:pppd_btdun_exec:s0
+/(system\/vendor|vendor)/bin/viarild u:object_r:viarild_exec:s0
+/(system\/vendor|vendor)/bin/statusd u:object_r:statusd_exec:s0
+/(system\/vendor|vendor)/bin/flashlessd u:object_r:flashlessd_exec:s0
+/(system\/vendor|vendor)/bin/ccci_rpcd u:object_r:ccci_rpcd_exec:s0
+/(system\/vendor|vendor)/bin/md_monitor u:object_r:md_monitor_exec:s0
+/(system\/vendor|vendor)/bin/guiext-server u:object_r:guiext-server_exec:s0
+
+/(system\/vendor|vendor)/app/mcRegistry(/.*)? u:object_r:mobicore_data_file:s0

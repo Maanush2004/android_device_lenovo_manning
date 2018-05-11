@@ -1,0 +1,15 @@
+# ==============================================
+# Policy File of /system/binmsensord Executable File
+
+# ==============================================
+# Type Declaration
+# ==============================================
+
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+# set the ctl.xxxd property
+allow msensord ctl_akmd09912_prop:property_service set;
+allow msensord ctl_bmm050d_prop:property_service set;
+allow msensord ctl_bmm056d_prop:property_service set;

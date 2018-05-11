@@ -1,0 +1,9 @@
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+# System Server Services
+
+# Other Services
+type nvram_agent_service, service_manager_type;
+type mtk_codec_service_service, service_manager_type;

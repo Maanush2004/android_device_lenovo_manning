@@ -1,0 +1,6 @@
+# ==============================================
+# MTK Policy Rule: fingerprint
+# ==============================================
+
+/dev/goodix_fp                 u:object_r:goodixfingerprintd_device:s0
+/system/bin/goodixfingerprintd u:object_r:goodixfingerprintd_exec:s0

@@ -1,0 +1,5 @@
+userdebug_or_eng(`
+allow factory goodixfingerprintd_device:chr_file { read write ioctl open };
+allow factory self:netlink_socket { read bind create write getattr setopt };
+allow factory teei_fp_device:chr_file { read write ioctl open };
+')

@@ -1,0 +1,81 @@
+# ==============================================
+# MTK Policy Rule
+# ============
+
+# Date : WK14.37
+# Operation : Migration
+# Purpose : for idling on homescreen
+allow system_server guiext-server:binder { transfer call };
+
+# Date: WK14.43
+# Operation : Migration
+# Purpose : access to atcid from system server for GPS AT Command.
+allow system_server atci_service:unix_dgram_socket sendto;
+allow system_server atci_service:dir write;
+allow system_server atci_service:dir add_name;
+
+# Date: WK14.43
+# Operation : Migration
+# Purpose : for bring up
+allow system_server sf_rtt_file:dir relabelto;
+
+# Date: WK14.44
+# Operation : Migration
+# Purpose : for debug
+allow system_server sf_rtt_file:dir r_dir_perms;
+
+# Date: WK14.47
+# Operation : MTBF
+# Purpose : for debug
+allow system_server sf_rtt_file:file r_file_perms;
+
+# Date: WK14.47
+# Operation : Sanity
+# Purpose : for /system/app/mcRegistry and /proc/secmem (TEE enable)
+allow system_server mobicore_data_file:dir r_dir_perms;
+allow system_server proc_secmem:file rw_file_perms;
+
+# Date: WK16.30
+# Operation : Migration
+# Purpose : for system_server operate /dev/RT_Monitor when enable hang detect
+allow system_server RT_Monitor_device:chr_file r_file_perms;
+
+# Date: WK14.52
+# Operation : Feature developing
+# Purpose : Communicate with native daemon (epdg_wod)
+unix_socket_connect(system_server, wod_action, epdg_wod)
+unix_socket_connect(system_server, wod_sim, epdg_wod)
+
+# Date : WK15.24
+# Operation: TEEI integration
+# Purpose: access for fp device
+allow system_server teei_fp_device:chr_file rw_file_perms;
+allow system_server teei_client_device:chr_file r_file_perms;
+
+# Date : WK15.30
+# Operation : Migration
+# Purpose : for device bring up, not to block early migration/sanity
+allow system_server dm_agent_binder_service:service_manager find;
+allow system_server guiext-server_service:service_manager find;
+
+# Date : WK15.30
+# Operation : Migration
+# Purpose : for device bring up, not to block early migration/sanity
+allow system_server aal_service:service_manager find;
+
+# Date: WK16.11
+# Operation: Migration
+# Purpose: [mtk_agpsd] Allow LocationExt connect to agpsd socket
+allow system_server mtk_agpsd:unix_stream_socket connectto;
+allow system_server mtk_agpsd:unix_dgram_socket sendto;
+
+# Date : 2016/02/26
+# Operation: BSP C2K(for LG) test case support
+# Purpose: allow atci to use NSIOT firewall
+# Package: com.mediatek.atci.service
+allow system_app netd_socket:sock_file write;
+
+# Date : 2016/07/11
+# Operation : Migration
+# Purpose : Add permission for gpu access
+allow system_server dri_device:chr_file { read write open ioctl };

@@ -1,0 +1,22 @@
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+# System Server Services
+mobile              u:object_r:mtk_mobile_service:s0
+msgmonitorservice   u:object_r:mtk_msg_monitor_service:s0
+#recovery                u:object_r:mtk_recovery_service:s0
+mtk-perfservice         u:object_r:mtk_perf_service:s0
+epdg_service        u:object_r:mtk_epdg_service:s0
+rns                 u:object_r:mtk_rns_service:s0
+
+
+# Other Services
+GoogleOtaBinder         u:object_r:ota_agent_service:s0
+PQ                      u:object_r:pq_service:s0
+GpuAppSpectatorService  u:object_r:gas_srv_service:s0
+GuiExtService       u:object_r:guiext-server_service:s0
+media.mmsdk         u:object_r:cameraserver_service:s0
+DmAgent             u:object_r:dm_agent_binder_service:s0
+AAL                 u:object_r:aal_service:s0
+

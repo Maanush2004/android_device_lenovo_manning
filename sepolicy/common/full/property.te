@@ -1,0 +1,90 @@
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+#=============allow terserver to set terservice property==============
+type terservice_prop, property_type, mtk_core_property_type;
+
+#=============allow mtkmd to set property==============
+type persist_mal_prop, property_type, mtk_core_property_type;
+
+#=============allow atcp to set property==============
+type atcp_prop, property_type, mtk_core_property_type;
+
+#=============allow lannetmngrd to set property==============
+type lannetmngrd_prop, property_type, mtk_core_property_type;
+
+#=============allow system_server to set media.wfd.*==============
+type media_wfd_prop, property_type, mtk_core_property_type;
+
+#=============allow mediaserver to set mjc.lib.*==============
+type mjc_lib_prop, property_type, mtk_core_property_type;
+
+#=============allow mediaserver to set mtk.mjc.*==============
+type mtk_mjc_prop, property_type, mtk_core_property_type;
+
+#=============allow contrl ril3gd===========
+type ctl_ril3gd_prop, property_type;
+
+#=============allow contrl zpppd_gprs===========
+type ctl_zpppdgprs_prop, property_type;
+
+#=============allow ipod==============
+type ipod_prop, property_type, mtk_core_property_type;
+type ctl_ipod_prop, property_type;
+type ctl_ipo_swap_prop, property_type;
+
+#=============allow volte_rcs_proxy ==============
+type ril_volte_stack_rcsuaproxy_prop, property_type, mtk_core_property_type;
+
+#=============allow program binary deamon  ==============
+type program_binary_prop, property_type, mtk_core_property_type;
+
+#=============allow radio to set mtk_volte_enable property==============
+type mtk_volte_prop, property_type, mtk_core_property_type;
+
+#=============allow radio to set mtk_wfc_enable property==============
+type mtk_wfc_prop, property_type, mtk_core_property_type;
+
+#=============allow radio to set mtk_vt_enable property==============
+type mtk_vt_prop, property_type, mtk_core_property_type;
+
+#=============allow mtkmal to start volte==============
+type ctl_volte_imcb_prop, property_type;
+type ctl_volte_stack_prop, property_type;
+type ctl_volte_ua_prop, property_type;
+type volte_prop, property_type, mtk_core_property_type;
+
+#=============allow hotknot deamon  ==============
+type hotknot_prop, property_type, mtk_core_property_type;
+
+#=============allow MBIMD==============
+type ctl_mbimd_prop, property_type;
+
+#=============allow sensor deamon to set property ==============
+type ctl_akmd09912_prop, property_type;
+type ctl_bmm056d_prop, property_type;
+type ctl_bmm050d_prop, property_type;
+
+
+#=============allow radio to set usb otg enable property  ==============
+type usb_otg_switch, property_type, mtk_core_property_type;
+
+#=============allow em set ims property================
+type mtk_em_ims_prop, property_type, mtk_core_property_type;
+
+#=============allow mtkril set ims property================
+type persist_mtk_main_attach, property_type;
+
+#============= allow uniservice-pack ==============
+type usp_prop, property_type, mtk_core_property_type;
+type usp_srv_prop, property_type, mtk_core_property_type;
+
+#=============allow EM set ims test mode property=============
+type ims_mode_prop, property_type, mtk_core_property_type;
+
+#=============allow EM set 3g vt property=============
+type mtk_em_3gvt_prop, property_type, mtk_core_property_type;
+
+#=============allow Rild ctrl ePDG PDN interface prop=============
+type ril_epdg_interface_ctrl_prop, property_type, mtk_core_property_type;
