@@ -5,7 +5,7 @@
 # 1 "<command-line>" 2
 # 1 "vendor/mediatek/proprietary/hardware/fstab/mt6797/fstab.in"
 # 26 "vendor/mediatek/proprietary/hardware/fstab/mt6797/fstab.in"
-/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/system /system ext4 ro wait,verify
+/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/system /system ext4 ro wait
 
 
 
