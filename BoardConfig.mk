@@ -134,7 +134,6 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 
 #GPS
 BOARD_GPS_LIBRARIES := true
-BOARD_CONNECTIVITY_MODULE := conn_soc 
 BOARD_MEDIATEK_USES_GPS := true
 BOARD_USES_AOSP_GPS_HAL := true
 
@@ -192,6 +191,7 @@ TARGET_NO_BOOTLOADER := true
 BOARD_CHARGER_SHOW_PERCENTAGE := true
 
 # RIL
+BOARD_RIL_CLASS := ../../../device/vernee/apollo/ril
 BOARD_CONNECTIVITY_MODULE := conn_soc
 
 # Seccomp filter
