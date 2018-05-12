@@ -2,7 +2,7 @@
 cd ../../../..
 cd system/core
 git apply --reverse -v ../../device/lenovo/manning/patches_mtk/system_core.patch
-git apply --reverse -v ../../device/lenovo/manning/patches_mtk/0012-PATCH-xen0n-some-MTK-services-e.g.-ril-daemon-mtk-re.patch
+git apply --reverse -v ../../device/lenovo/manning/patches_mtk/system_core1.patch
 cd ../..
 cd bionic
 git apply --reverse -v ../device/lenovo/manning/patches_mtk/bionic.patch
@@ -12,20 +12,15 @@ git apply --reverse -v ../../device/lenovo/manning/patches_mtk/system_sepolicy.p
 cd ../..
 cd frameworks/av
 git apply --reverse -v ../../device/lenovo/manning/patches_mtk/frameworks_av.patch
+git apply --reverse -v ../../device/lenovo/manning/patches_mtk/0002-camera.patch
 cd ..
 cd native
 git apply --reverse -v ../../device/lenovo/manning/patches_mtk/frameworks_native.patch
 cd ..
 cd base
 git apply --reverse -v ../../device/lenovo/manning/patches_mtk/frameworks_base.patch
-cd ..
-cd opt/telephony
-git apply --reverse -v ../../../device/lenovo/manning/patches_mtk/frameworks_opt_telephony.patch
-cd ../../..
-cd packages/apps/Snap
-git apply --reverse -v ../../../device/lenovo/manning/patches_mtk/snap.patch
-cd ..
-cd FMRadio
+cd ../..
+cd packages/apps/FMRadio
 git apply --reverse -v ../../../device/lenovo/manning/patches_mtk/fmradio.patch
 cd ../../..
 cd system/netd
