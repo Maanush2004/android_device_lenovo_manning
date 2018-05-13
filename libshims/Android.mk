@@ -52,7 +52,7 @@ include $(CLEAR_VARS)
 LOCAL_SRC_FILES := program_binary_builder.cpp
 LOCAL_SHARED_LIBRARIES := libbinder libutils libcutils
 LOCAL_MODULE := libshim_program_binary_builder
-LOCAL_CLANG := false
+LOCAL_CLANG := true
 LOCAL_CXX_STL := none
 LOCAL_SANITIZE := never
 LOCAL_MODULE_TAGS := optional

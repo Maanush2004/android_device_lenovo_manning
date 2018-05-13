@@ -22,6 +22,8 @@ LOCAL_PATH := device/lenovo/manning
 
 #######################################################################
 
+TARGET_KERNEL_CONFIG := manning_defconfig
+
 # Platform
 TARGET_BOARD_PLATFORM := mt6797
 
