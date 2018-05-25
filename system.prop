@@ -65,7 +65,7 @@ ro.kernel.zio=38,108,105,16
 # Disable dirty region for Mali
 #debug.hwui.render_dirty_regions=false
 
-ro.sf.lcd_density=480
+ro.sf.lcd_density=640
 
 # performance
 ro.mtk_perf_simple_start_win=1
@@ -87,8 +87,20 @@ dalvik.vm.dex2oat-threadcount=8
 #
 # ADDITIONAL_BUILD_PROPERTIES
 #
+ro.mot.build.customerid=retail
+ro.mot.build.version.sdk_int=26
+ro.mot.build.product.increment=34
+ro.mot.build.version.release=26.34
+ro.build.version.full=Blur_Version.26.34.74.manning.retail.en.US
+ro.product.first_api_level=25
+ro.config.ringtone=Fantastic_Clang.ogg
+ro.config.ringtone_2=Fantastic_Clang.ogg
+ro.config.notification_sound=Curiosity.ogg
+ro.config.alarm_alert=Aesthete.ogg
+ro.com.google.ime.theme_id=4
 ro.bug2go.magickeys=24,26
 persist.camera.expose.aux=1
+camera.aux.packagelist=com.motorola.cameraonemtk,com.motorola.motocit,com.mediatek.camera
 ro.mediatek.chip_ver=S01
 ro.mediatek.platform=MT6797
 ro.telephony.sim.count=2
@@ -319,6 +331,13 @@ ro.lenovo.boost.power=true
 ro.lenovo.boost.input=true
 ro.product.display=XT1902-3
 ro.asset_prc=1
+ro.com.google.clientidbase=android-motorola
+ro.com.google.clientidbase.am=android-motorola
+ro.com.google.clientidbase.gmm=android-motorola
+ro.com.google.clientidbase.yt=android-motorola
+ro.com.google.clientidbase.ms=android-motorola-rev2
+ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html
+ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html
 ro.opa.eligible_device=true
 ro.setupwizard.mode=OPTIONAL
 ro.com.google.gmsversion=7.1_r3
