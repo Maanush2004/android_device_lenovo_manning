@@ -2,157 +2,69 @@
 # system.prop for Lenovo K8 Note
 #
 
-rild.libpath=mtk-ril.so
+# RIL
+rild.libpath=/system/vendor/lib64/mtk-ril.so
 rild.libargs=-d /dev/ttyC0
 
-
-# MTK, Infinity, 20090720 {
+# Wifi
 wifi.interface=wlan0
-# MTK, Infinity, 20090720 }
-
-# MTK, mtk03034, 20101210 {
 ro.mediatek.wlan.wsc=1
-# MTK, mtk03034 20101210}
-# MTK, mtk03034, 20110318 {
 ro.mediatek.wlan.p2p=1
-# MTK, mtk03034 20110318}
-
-# MTK, mtk03034, 20101213 {
 mediatek.wlan.ctia=0
-# MTK, mtk03034 20101213}
+mediatek.wlan.chip=CONSYS_MT6797
+mediatek.wlan.module.postfix=_consys_mt6797
 
-
-#
 wifi.tethering.interface=ap0
-#
-
-ro.opengles.version=196610
-#ro.kernel.qemu=1
-
 wifi.direct.interface=p2p0
-#dalvik.vm.heapgrowthlimit=256m
-#dalvik.vm.heapsize=512m
 
-# USB MTP WHQL
-ro.sys.usb.mtp.whql.enable=0
+# OpenGL
+ro.opengles.version=196610
 
-# Power off opt in IPO
-sys.ipo.pwrdncap=2
+# Dalvik
+dalvik.vm.heapgrowthlimit=256m
+dalvik.vm.heapsize=512m
 
-ro.sys.usb.storage.type=mtp
-
-# USB BICR function
-ro.sys.usb.bicr=no
-
-# USB Charge only function
-ro.sys.usb.charging.only=yes
-
-# audio
+# Audio
 ro.camera.sound.forced=0
 ro.audio.silent=0
 
+
 ro.zygote.preload.enable=0
 
-# temporary enables NAV bar (soft keys)
-#qemu.hw.mainkeys=0
+# Disable Navigation Bar
 qemu.hw.mainkeys=1
 
-ro.kernel.zio=38,108,105,16
-#ro.kernel.qemu=1
-#ro.kernel.qemu.gles=0
-#ro.boot.selinux=disable
-
 # Disable dirty region for Mali
-#debug.hwui.render_dirty_regions=false
+debug.hwui.render_dirty_regions=false
 
-ro.sf.lcd_density=640
+# LCD Density
+ro.sf.lcd_density=480
 
-# performance
-ro.mtk_perf_simple_start_win=1
-ro.mtk_perf_fast_start_win=1
-ro.mtk_perf_response_time=1
-
-# Lenovo, wangkl3, 2017-3-2, INDRIYAPRO-419, set max background services
-ro.config.max_starting_bg=8
-
-# Lenovo fangzf1 voice volume max index 7->8
-ro.config.vc_call_vol_steps=8
-
-# Lenovo wengjun1 2017-4-19, add for disable touchfilter log
-sys.input.TouchFilterLogEnable=false
-
-# Lenovo chenmf5 2017-6-13, set max dex2oat thread count 8
-dalvik.vm.dex2oat-threadcount=8
-
-#
-# ADDITIONAL_BUILD_PROPERTIES
-#
-ro.mot.build.customerid=retail
-ro.mot.build.version.sdk_int=26
-ro.mot.build.product.increment=34
-ro.mot.build.version.release=26.34
-ro.build.version.full=Blur_Version.26.34.74.manning.retail.en.US
-ro.product.first_api_level=25
-ro.config.ringtone=Fantastic_Clang.ogg
-ro.config.ringtone_2=Fantastic_Clang.ogg
-ro.config.notification_sound=Curiosity.ogg
-ro.config.alarm_alert=Aesthete.ogg
-ro.com.google.ime.theme_id=4
-ro.bug2go.magickeys=24,26
-persist.camera.expose.aux=1
-camera.aux.packagelist=com.motorola.cameraonemtk,com.motorola.motocit,com.mediatek.camera
-ro.mediatek.chip_ver=S01
-ro.mediatek.platform=MT6797
+# RIL
 ro.telephony.sim.count=2
 persist.radio.default.sim=0
-ril.specific.sm_cause=0
+persist.radio.mobile.data=0,0
+persist.radio.multisim.config=dsds
 bgw.current3gband=0
+ril.current.share_modem=2
 ril.external.md=0
-ro.mtk_cam_lomo_support=1
-ro.sf.hwrotation=0
-persist.radio.fd.counter=150
-persist.radio.fd.off.counter=50
-persist.radio.fd.r8.counter=150
-persist.radio.fd.off.r8.counter=50
-drm.service.enabled=true
-fmradio.driver.enable=1
-mtk.eccci.c2k=enabled
-ril.first.md=1
-ril.flightmode.poweroffMD=0
 ril.telephony.mode=0
 dalvik.vm.mtk-stack-trace-file=/data/anr/mtk_traces.txt
-mediatek.wlan.chip=CONSYS_MT6797
-mediatek.wlan.module.postfix=_consys_mt6797
-ril.read.imsi=1
-ril.radiooff.poweroffMD=0
-ro.frp.pst=/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/frp
-ro.mtk_protocol1_rat_config=Lf/Lt/W/G
-ro.mediatek.version.branch=alps-mp-n1.mp9
-ro.mediatek.version.release=alps-mp-n1.mp9-V1_lenovo6797.6m.n_P139
-ro.mediatek.version.sdk=4
-ro.num_md_protocol=2
-persist.radio.multisim.config=dsds
-ro.mtk_bt_support=1
-ro.mtk_wappush_support=1
-ro.mtk_agps_app=1
-ro.mtk_audio_tuning_tool_ver=V2.2
-ro.mtk_wlan_support=1
-ro.mtk_gps_support=1
-ro.mtk_omacp_support=1
-ro.mtk_search_db_support=1
-ro.mtk_dialer_search_support=1
-ro.mtk_dhcpv6c_wifi=1
-ro.have_aacencode_feature=1
-persist.sys.display.clearMotion=0
-persist.clearMotion.fblevel.nrm=255
-persist.clearMotion.fblevel.bdr=255
+persist.radio.fd.counter=15
+persist.radio.fd.off.counter=5
+persist.radio.fd.r8.counter=15
+persist.radio.fd.off.r8.counter=5
+ro.mtk_gemini_support=1
+persist.gemini.sim_num=2
+ro.gemini.smart_sim_switch=false
+
+# MTK
 ro.mtk_fd_support=1
 ro.mtk_oma_drm_support=1
 ro.mtk_widevine_drm_l3_support=1
 ro.mtk_eap_sim_aka=1
 ro.mtk_send_rr_support=1
 ro.mtk_emmc_support=1
-ro.telephony.default_network=9,9
 ro.mtk_shared_sdcard=1
 ro.mtk_enable_md1=1
 ro.mtk_pq_support=3
@@ -166,7 +78,6 @@ ro.mtk_perfservice_support=1
 ro.mtk_sim_hot_swap_common_slot=1
 ro.mtk_zsdhdr_support=1
 ro.mtk_cam_mfb_support=3
-ro.mtk_clearmotion_support=1
 ro.mtk_slow_motion_support=1
 ro.mtk_cam_img_refocus_support=1
 ro.mtk_lte_support=1
@@ -187,166 +98,23 @@ persist.mtk_vilte_support=1
 ro.mtk_vilte_ut_support=0
 persist.mtk_ussi_support=1
 ro.mtk_dolby_dap_support=1
-wfd.dummy.enable=1
-wfd.iframesize.level=0
+
+ro.mediatek.chip_ver=S01
+ro.mediatek.version.branch=alps-mp-n1.mp9
+ro.mediatek.version.release=alps-mp-n1.mp9-V1_lenovo6797.6m.n_P139
+ro.mediatek.version.sdk=4
+ro.mediatek.platform=MT6797
 ro.mediatek.project.path=ro.mtk_microtrust_tee_support=1
+bgw.current3gband=0
+ro.sf.hwrotation=0
 persist.mtk.wcn.combo.chipid=-1
-persist.mtk.wcn.patch.version=-1
-persist.mtk.wcn.dynamic.dump=0
-service.wcn.driver.ready=no
-service.wcn.coredump.mode=0
-persist.mtk.connsys.poweron.ctl=0
-persist.mtk_epdg_support=1
-ro.com.android.mobiledata=true
-persist.radio.mobile.data=0,0
-persist.meta.dumpdata=0
-ro.mtk_deinterlace_support=1
-ro.mtk_md_sbp_custom_value=0
-dalvik.vm.heapgrowthlimit=192m
-dalvik.vm.heapsize=384m
-persist.radio.mtk_dsbp_support=1
-persist.mtk_dynamic_ims_switch=1
-persist.radio.mtk_ps2_rat=W/G
-persist.radio.mtk_ps3_rat=G
-ro.boot.opt_c2k_lte_mode=0
-ro.boot.opt_md1_support=9
-ro.boot.opt_lte_support=1
-persist.log.tag.AT=I
-persist.log.tag.RILMUXD=I
-persist.log.tag.RILC-MTK=I
-persist.log.tag.RILC=I
-persist.log.tag.RfxMainThread=I
-persist.log.tag.RfxRoot=I
-persist.log.tag.RfxRilAdapter=I
-persist.log.tag.RfxController=I
-persist.log.tag.RILC-RP=I
-persist.log.tag.DCT=I
-persist.log.tag.RIL-DATA=I
-persist.log.tag.C2K_RIL-DATA=I
-ro.boot.opt_eccci_c2k=1
-ro.boot.opt_using_default=1
-mtk.vdec.waitkeyframeforplay=1
-ro.sys.sdcardfs=1
-persist.log.tag.tel_log_ctrl=1
-persist.log.tag.GsmCdmaPhone=I
-persist.log.tag.SSDecisonMaker=I
-persist.log.tag.GsmMmiCode=I
-persist.log.tag.RpSsController=I
-persist.log.tag.RIL-SS=I
-persist.log.tag.RILMD2-SS=I
-persist.log.tag.DataSubSelector=I
-persist.log.tag.DcFcMgr=I
-persist.log.tag.DC-1=I
-persist.log.tag.DC-2=I
-persist.log.tag.RetryManager=I
-persist.log.tag.IccProvider=I
-persist.log.tag.IccPhoneBookIM=I
-persist.log.tag.AdnRecordCache=I
-persist.log.tag.AdnRecordLoader=I
-persist.log.tag.AdnRecord=I
-persist.log.tag.RIL-PHB=I
-persist.log.tag.RIL-SMS=I
-persist.log.tag.DupSmsFilterExt=I
-persist.log.tag.ConSmsFwkExt=I
-persist.log.tag.DataOnlySmsFwk=I
-persist.log.tag.VT=I
-persist.log.tag.ImsVTProvider=I
-persist.log.tag.IccCardProxy=I
-persist.log.tag.IsimFileHandler=I
-persist.log.tag.IsimRecords=I
-persist.log.tag.SIMRecords=I
-persist.log.tag.SpnOverride=I
-persist.log.tag.UiccCard=I
-persist.log.tag.UiccController=I
-persist.log.tag.RIL-SIM=I
-persist.log.tag.MtkAgpsHelper=I
-persist.log.tag.CountryDetector=I
-persist.log.tag.NetworkStats=I
-persist.log.tag.NetworkPolicy=I
-persist.log.tag.NetworkIdentity=I
-persist.log.tag.ImsService=I
-persist.log.tag.IMS_RILA=I
-persist.log.tag.IMSRILRequest=I
-persist.log.tag.ImsManager=I
-persist.log.tag.ImsApp=I
-persist.log.tag.ImsBaseCommands=I
-persist.log.tag.ImsCall=I
-persist.log.tag.ImsPhone=I
-persist.log.tag.ImsPhoneCall=I
-persist.log.tag.ImsPhoneBase=I
-persist.log.tag.ImsCallSession=I
-persist.log.tag.ImsCallProfile=I
-persist.log.tag.ImsEcbm=I
-persist.log.tag.ImsEcbmProxy=I
-persist.log.tag.OperatorUtils=I
-persist.log.tag.WfoApp=I
-persist.log.tag.GbaApp=I
-persist.log.tag.GbaBsfProcedure=I
-persist.log.tag.GbaBsfResponse=I
-persist.log.tag.GbaDebugParam=I
-persist.log.tag.GbaService=I
-persist.log.tag.SresResponse=I
-persist.log.tag.ImsUtService=I
-persist.log.tag.SimservType=I
-persist.log.tag.SimservsTest=I
-persist.log.tag.ImsUt=I
-persist.log.tag.SuppSrvConfig=I
-persist.log.tag.ECCCallHelper=I
-persist.log.tag.GsmConnection=I
-persist.log.tag.TelephonyConf=I
-persist.log.tag.TeleConfCtrler=I
-persist.log.tag.TelephonyConn=I
-persist.log.tag.TeleConnService=I
-persist.log.tag.ECCRetryHandler=I
-persist.log.tag.ECCNumUtils=I
-persist.log.tag.ECCRuleHandler=I
-persist.log.tag.SuppMsgMgr=I
-persist.log.tag.ECCSwitchPhone=I
-persist.log.tag.GsmCdmaConn=I
-persist.log.tag.Phone=I
-persist.log.tag.RIL-CC=I
-persist.log.tag.RpCallControl=I
-persist.log.tag.RpAudioControl=I
-persist.log.tag.RadioManager=I
-persist.log.tag.RIL_Mux=I
-persist.log.tag.RIL-OEM=I
-persist.log.tag.RIL=I
-persist.log.tag.RIL_UIM_SOCKET=I
-persist.log.tag.RILD=I
-persist.log.tag.RIL-RP=I
-persist.log.tag.RfxMessage=I
-persist.log.tag.RfxDebugInfo=I
-persist.log.tag.RfxTimer=I
-persist.log.tag.RfxObject=I
-persist.log.tag.SlotQueueEntry=I
-persist.log.tag.RfxAction=I
-persist.log.tag.RFX=I
-persist.log.tag.RpRadioMessage=I
-persist.log.tag.RpModemMessage=I
-persist.log.tag.PhoneFactory=I
-persist.log.tag.ProxyController=I
-persist.audio.lenovo.version=MANNING-DVT2-2017-5-25
-ro.lenovo.boost.acty=true
-ro.lenovo.boost.power=true
-ro.lenovo.boost.input=true
-ro.product.display=XT1902-3
-ro.asset_prc=1
-ro.com.google.clientidbase=android-motorola
-ro.com.google.clientidbase.am=android-motorola
-ro.com.google.clientidbase.gmm=android-motorola
-ro.com.google.clientidbase.yt=android-motorola
-ro.com.google.clientidbase.ms=android-motorola-rev2
-ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html
-ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html
-ro.opa.eligible_device=true
-ro.setupwizard.mode=OPTIONAL
-ro.com.google.gmsversion=7.1_r3
-persist.radio.apn_delay=5000
-persist.sys.media.use-awesome=false
-persist.cne.rat.wlan.chip.oem=WCN
+drm.service.enabled=true
+wfd.dummy.enable=1
+persist.sys.display.clearMotion=0
+persist.clearMotion.fblevel.nrm=255
+persist.clearMotion.fblevel.bdr=255
+ro.mtk_clearmotion_support=1
 keyguard.no_require_sim=true
-mdc_initial_max_retry=10
-ro.mot.security.enable=true
 ro.boot.hardware.sku=XT1902-3
 persist.sys.dalvik.vm.lib.2=libart.so
 dalvik.vm.isa.arm64.variant=cortex-a53
@@ -356,3 +124,16 @@ dalvik.vm.isa.arm.features=default
 net.bt.name=Android
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
 ro.expect.recovery_id=0xfbc0ef124bcdfa97d223b2cbd8ce9462368d71ea000000000000000000000000
+persist.camera.expose.aux=1
+persist.debug.wfd.enable=1
+
+# Volte
+#persist.mtk_volte_support=1
+#persist.mtk.volte.enable=1
+#persist.mtk_vilte_support=1
+#ro.mtk_vilte_ut_support=0
+#persist.radio.mtk_dsbp_support=1
+#persist.mtk_dynamic_ims_switch=1
+
+# FRP
+ro.frp.pst=/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/frp
