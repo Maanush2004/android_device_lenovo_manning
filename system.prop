@@ -18,7 +18,7 @@ wifi.tethering.interface=ap0
 wifi.direct.interface=p2p0
 
 # OpenGL
-ro.opengles.version=196610
+ro.opengles.version=196609
 
 # Dalvik
 dalvik.vm.heapgrowthlimit=256m
