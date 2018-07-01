@@ -245,6 +245,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=MT6797 \
     ro.telephony.ril.config=fakeiccid \
     ro.com.android.mobiledata=false
+	
+# TWRP.fstab
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab
     
 
 	
