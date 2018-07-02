@@ -197,6 +197,8 @@ BOARD_CONNECTIVITY_MODULE := conn_soc
 BOARD_SECCOMP_POLICY += $(DEVICE_PATH)/seccomp	
 
 # TWRP-specific
+#RECOVERY_VARIANT := twrp
+ifneq ($(RECOVERY_VARIANT),twrp)
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
@@ -230,6 +232,7 @@ TW_USE_TOOLBOX := true
 TW_EXTRA_LANGUAGES := true
 TW_DEFAULT_LANGUAGE := en
 TW_NO_SCREEN_BLANK := true
+TW_NO_BATT_PERCENT := true
 
 # Hack to build without kernel sources
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
