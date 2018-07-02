@@ -233,6 +233,7 @@ TW_EXTRA_LANGUAGES := true
 TW_DEFAULT_LANGUAGE := en
 TW_NO_SCREEN_BLANK := true
 TW_NO_BATT_PERCENT := true
+endif
 
 # Hack to build without kernel sources
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
