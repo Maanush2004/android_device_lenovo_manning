@@ -23,3 +23,9 @@ Front Camera | 13MP
 ---
 
 This device tree can be used to build LineageOS-14.1 for Lenovo K8 Note
+
+Bugs:
+RIL
+Front cam and Front flash
+Video Decoding
+Music Key
