@@ -265,6 +265,39 @@ struct wpa_driver_hotspot_params {
     u8  bssid[ETH_ALEN];
 };
 
+struct wpa_driver_hotspot_set_config_params {
+    struct wpa_driver_test_mode_info hdr;
+    u32 index;
+    u32 value;
+};
+
+#ifdef CONFIG_MTK_LTE_COEX
+enum nl80211_testmode_available_chan_attr{
+    __NL80211_TESTMODE_AVAILABLE_CHAN_ATTR_INVALID,
+    NL80211_TESTMODE_AVAILABLE_CHAN_ATTR_2G_BASE_1,
+    NL80211_TESTMODE_AVAILABLE_CHAN_ATTR_5G_BASE_36,
+    NL80211_TESTMODE_AVAILABLE_CHAN_ATTR_5G_BASE_52,
+    NL80211_TESTMODE_AVAILABLE_CHAN_ATTR_5G_BASE_100,
+    NL80211_TESTMODE_AVAILABLE_CHAN_ATTR_5G_BASE_149,
+
+    __NL80211_TESTMODE_AVAILABLE_CHAN_ATTR_AFTER_LAST,
+    NL80211_TESTMODE_AVAILABLE_CHAN_ATTR_MAX = __NL80211_TESTMODE_AVAILABLE_CHAN_ATTR_AFTER_LAST - 1
+};
+
+struct wpa_driver_available_chan_s {
+    u32 ch_2g_base1;
+    u32 ch_5g_base36;
+    u32 ch_5g_base52;
+    u32 ch_5g_base100;
+    u32 ch_5g_base149;
+};
+
+struct wpa_driver_get_available_channel_params {
+    struct wpa_driver_test_mode_info hdr;
+    u8  *buf;
+};
+#endif
+
 /* SW CMD */
 struct wpa_driver_sw_cmd_params {
     struct wpa_driver_test_mode_info hdr;
@@ -361,12 +394,14 @@ enum nl80211_testmode_params {
     NL80211_TESTMODE_STATISTICS = 0x10,
     NL80211_TESTMODE_LINK_DETECT = 0x20,
 
+    // Hotspot manager testmode command
+    NL80211_TESTMODE_HS_SET_CONFIG = 51,
+
     /* New test mode command id, should greater than TESTMODE_CMD_ID_NEW_BEGIN */
     NL80211_TESTMODE_NEW_BEGIN = 100,
     NL80211_TESTMODE_SUSPEND = 101,
     NL80211_TESTMODE_STR_CMD = 102,
     NL80211_TESTMODE_RXFILTER = 103
 };
-
 
 #endif

@@ -1,9 +1,0 @@
-# ==============================================
-# MTK Policy Rule
-# ============
-
-# Date : WK14.32
-# Operation : AEE UT
-# Purpose : for AEE module
-domain_auto_trans(debuggerd, dmlog_exec, dmlog)
-

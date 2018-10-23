@@ -19,7 +19,7 @@
 LOCAL_PATH := $(call my-dir)
 
 ##### For Google SUPPLICANT #####
-    $(warning build BASIC wpa_supplicant)
+  $(warning build BASIC wpa_supplicant)
     WPA_SUPPL_DIR = external/wpa_supplicant_8
     WPA_SRC_FILE :=
 
@@ -30,6 +30,7 @@ ifneq ($(BOARD_HOSTAPD_DRIVER),)
     CONFIG_DRIVER_$(BOARD_HOSTAPD_DRIVER) := y
 endif
 
+include $(WPA_SUPPL_DIR)/hostapd/android.config
 include $(WPA_SUPPL_DIR)/wpa_supplicant/android.config
 
 WPA_SUPPL_DIR_INCLUDE = $(WPA_SUPPL_DIR)/src \
@@ -61,6 +62,8 @@ endif
 ########################
 include $(CLEAR_VARS)
 LOCAL_MODULE := lib_driver_cmd_mt66xx
+LOCAL_PROPRIETARY_MODULE := true
+LOCAL_MODULE_OWNER := mtk
 LOCAL_SHARED_LIBRARIES := libc libcutils
 LOCAL_CFLAGS := $(L_CFLAGS)
 LOCAL_SRC_FILES := $(WPA_SRC_FILE)

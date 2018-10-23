@@ -1,5 +1,5 @@
 #
-# Copyright 2015 The Android Open Source Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,13 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
-# This file is executed by build/envsetup.sh, and can use anything
-# defined in envsetup.sh.
 #
-# In particular, you can add lunch options with the add_lunch_combo
-# function: add_lunch_combo generic-eng
-
-for var in eng user userdebug; do
-  add_lunch_combo lineage_manning-$var
-done
+add_lunch_combo lineage_manning-userdebug
+add_lunch_combo lineage_manning-eng
+add_lunch_combo lineage_manning-user

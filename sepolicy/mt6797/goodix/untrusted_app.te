@@ -1,4 +1,0 @@
-userdebug_or_eng(`
-#For goodix fingerprint permissions checking
-allow untrusted_app goodix_fingerprint_service:service_manager { find };
-')
