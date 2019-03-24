@@ -1,2 +1,0 @@
-type goodixfingerprintd_exec, exec_type, file_type;
-type goodixfingerprintd_data_file, file_type, data_file_type;

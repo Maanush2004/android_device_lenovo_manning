@@ -1,4 +1,4 @@
-# Lenovo K8 Note - LineageOS 14.1
+# Lenovo K8 Note - LineageOS 15.0
 ==============
 
 # About Device
@@ -22,10 +22,4 @@ Front Camera | 13MP
 
 ---
 
-This device tree can be used to build LineageOS-14.1 for Lenovo K8 Note
-
-Bugs:
-RIL
-Front cam and Front flash
-Video Decoding
-Music Key
+This device tree can be used to build LineageOS-15.0 for Lenovo K8 Note

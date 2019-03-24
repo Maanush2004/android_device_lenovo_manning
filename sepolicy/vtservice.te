@@ -1,0 +1,36 @@
+# ==============================================
+# Policy File of /system/bin/vtservice Executable File
+
+
+# ==============================================
+# Type Declaration
+#
+# "coredomain" mean in system partition
+# "mtkimsapdomain" is for IMS repo phase 3, mean all permiton for IMCB/UA
+# ==============================================
+
+type vtservice_exec , exec_type, file_type;
+type vtservice ,domain;
+typeattribute vtservice coredomain;
+
+type vtservice_hidl_exec , exec_type, file_type, vendor_file_type;
+type vtservice_hidl ,domain;
+
+# ==============================================
+# Android Policy Rule
+# ==============================================
+
+# ==============================================
+# NSA Policy Rule
+# ==============================================
+
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+init_daemon_domain(vtservice)
+binder_use(vtservice)
+binder_call(vtservice, mediaserver)
+binder_service(vtservice)
+
+init_daemon_domain(vtservice_hidl)

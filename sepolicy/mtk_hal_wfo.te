@@ -1,0 +1,6 @@
+type mtk_hal_wfo, domain;
+type mtk_hal_wfo_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(mtk_hal_wfo);
+
+vndbinder_use(mtk_hal_wfo);

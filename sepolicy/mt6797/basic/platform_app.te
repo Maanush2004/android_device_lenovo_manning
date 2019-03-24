@@ -1,2 +1,0 @@
-#=============allow nvram================
-allow platform_app nvram_agent_service:service_manager find;
