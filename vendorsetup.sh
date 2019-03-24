@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2018 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,6 +14,6 @@
 # limitations under the License.
 #
 #
-add_lunch_combo lineage_manning-userdebug
-add_lunch_combo lineage_manning-eng
-add_lunch_combo lineage_manning-user
+add_lunch_combo omni_manning-userdebug
+add_lunch_combo omni_manning-eng
+add_lunch_combo omni_manning-user

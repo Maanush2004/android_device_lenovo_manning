@@ -1,6 +1,0 @@
-type motorola_hal_panel, domain;
-type motorola_hal_panel_exec, exec_type, vendor_file_type, file_type;
-
-init_daemon_domain(motorola_hal_panel);
-
-vndbinder_use(motorola_hal_panel);
