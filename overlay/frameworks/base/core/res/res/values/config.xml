@@ -103,9 +103,6 @@
     <!-- Flag indicating if the user is notified when the mobile network access is restricted -->
     <bool name="config_user_notification_of_restrictied_mobile_access">false</bool>
 
-    <!-- Set this true only if the device has separate attention and notification lights. -->
-    <bool name="config_useAttentionLight">true</bool>
-
     <!-- Display low battery warning when battery level dips to this value -->
     <integer name="config_lowBatteryWarningLevel">10</integer>
     
@@ -195,18 +192,6 @@
         timeout expires.  May be less than the minimum allowed brightness setting
         that can be set by the user. -->
     <integer name="config_screenBrightnessDim">10</integer>
-	
-    <!-- Default color for notification LED is green. -->
-    <color name="config_defaultNotificationColor">#ff00ff00</color>
-
-    <!-- Default value for led color when battery is low on charge -->
-    <integer name="config_notificationsBatteryLowARGB">0xffff0000</integer>
-
-    <!-- Default value for led color when battery is medium charged -->
-    <integer name="config_notificationsBatteryMediumARGB">0xffff0000</integer>
-
-    <!-- Default value for led color when battery is fully charged -->
-    <integer name="config_notificationsBatteryFullARGB">0xffff0000</integer>
 
     <integer-array name="config_autoBrightnessLevels">
         <item>16</item>
@@ -260,4 +245,4 @@
     <!-- <integer name="config_bluetooth_operating_voltage_mv">0</integer> -->
     <integer name="config_bluetooth_operating_voltage_mv">3300</integer>	
 	
-	</resources>	
+</resources>	
