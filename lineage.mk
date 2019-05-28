@@ -32,4 +32,7 @@ PRODUCT_BRAND			:= lenovo
 PRODUCT_MODEL			:= Lenovo K8 Note
 PRODUCT_MANUFACTURER	:= lenovo
 
+# Google client ID property.
+PRODUCT_GMS_CLIENTID_BASE := android-motorola
+
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=lineage_manning_retail
