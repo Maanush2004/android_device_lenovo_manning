@@ -201,7 +201,7 @@ PRODUCT_PACKAGES+= \
     android.hardware.vibrator@1.0-service 
 
 # Wifi
-	PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0 \
     android.hardware.wifi@1.0-service \
 	 dhcpcd.conf \
