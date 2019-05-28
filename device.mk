@@ -95,6 +95,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	libandroid_net
 
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.manager@1.0
+	
 # Audio
 PRODUCT_PACKAGES += \
     audio.r_submix.default \
