@@ -133,6 +133,9 @@ BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/lineagehw
 WITH_DEXPREOPT := true
 DONT_DEXPREOPT_PREBUILTS := true
 
+# Audio must use XML format for Treblized devices
+USE_XML_AUDIO_POLICY_CONF := 1
+
 # Disable memcpy opt (for audio libraries)
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
 
