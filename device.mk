@@ -294,3 +294,6 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxxhdpi-3072-hwu
 
 # Vendor
 $(call inherit-product, vendor/lenovo/manning/manning-vendor.mk)
+
+# Properties
+-include device/lenovo/manning/vendor_prop.mk
