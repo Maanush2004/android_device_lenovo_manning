@@ -157,4 +157,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.cne.rat.wlan.chip.oem=WCN \
     keyguard.no_require_sim=true \
     mdc_initial_max_retry=10 \
-    ro.boot.hardware.sku=XT1902-3 \
+    ro.boot.hardware.sku=XT1902-3 
+	
+# Some props needed to make some features work in GSIs
+
+# Headphone jack fix until device overlay is implemented
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.sys.overlay.devinputjack=true
+
+# Bluetooth Fix on GSIs (Pie) (Temporarily)
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.sys.bt.unsupport.features=00000001
+	persist.sys.bt.unsupport.states=000000000000000000000011111
