@@ -1,4 +1,4 @@
-# Lenovo K8 Note - LineageOS 15.0
+# Lenovo K8 Note - LineageOS 15.1-Treble
 ==============
 
 # About Device
