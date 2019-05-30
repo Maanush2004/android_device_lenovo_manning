@@ -264,6 +264,12 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += netutils-wrapper-1.0 
 
+# Modules required for GSIs
+PRODUCT_PACKAGES += \
+	libselinux_vendor \
+	libavservices_minijail_vendor \
+	libminijail_vendor \
+	libstdc++.vendor
 	
 # Extras
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
