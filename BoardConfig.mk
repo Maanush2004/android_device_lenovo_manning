@@ -138,6 +138,9 @@ DONT_DEXPREOPT_PREBUILTS := true
 # Build a separate vendor.img
 TARGET_COPY_OUT_VENDOR := vendor
 
+# Move props set using PRODUCT_PROPERTY_OVERRIDES to vendor/build.prop
+BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
+
 # Audio must use XML format for Treblized devices
 USE_XML_AUDIO_POLICY_CONF := 1
 
