@@ -135,6 +135,9 @@ BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/lineagehw
 WITH_DEXPREOPT := true
 DONT_DEXPREOPT_PREBUILTS := true
 
+# Treble
+PRODUCT_FULL_TREBLE_OVERRIDE := true
+
 # Build a separate vendor.img
 TARGET_COPY_OUT_VENDOR := vendor
 
