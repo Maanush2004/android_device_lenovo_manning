@@ -56,7 +56,6 @@ on late-init
 # mount different fs start
 
 on charger
-    mount ext4 /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/system /system ro wait
     chmod 0660 /dev/spm
     chown system system /dev/spm
     start spm_script
