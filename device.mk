@@ -289,9 +289,6 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 # Dalvik heap configurations
 $(call inherit-product, frameworks/native/build/phone-xxxhdpi-3072-dalvik-heap.mk)
 
-# Call hwui memory config
-$(call inherit-product-if-exists, frameworks/native/build/phone-xxxhdpi-3072-hwui-memory.mk)
-
 # Vendor
 $(call inherit-product, vendor/lenovo/manning/manning-vendor.mk)
 
