@@ -133,6 +133,9 @@ BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/lineagehw
 WITH_DEXPREOPT := true
 DONT_DEXPREOPT_PREBUILTS := true
 
+# Build a separate vendor.img
+TARGET_COPY_OUT_VENDOR := vendor
+
 # Audio must use XML format for Treblized devices
 USE_XML_AUDIO_POLICY_CONF := 1
 
