@@ -167,5 +167,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Bluetooth Fix on GSIs (Pie) (Temporarily)
 PRODUCT_PROPERTY_OVERRIDES += \
-	persist.sys.bt.unsupport.features=00000001
+	persist.sys.bt.unsupport.features=00000001 \
 	persist.sys.bt.unsupport.states=000000000000000000000011111
