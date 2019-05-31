@@ -265,7 +265,8 @@ PRODUCT_PACKAGES += \
 	libselinux_vendor \
 	libavservices_minijail_vendor \
 	libminijail_vendor \
-	libstdc++.vendor
+	libstdc++.vendor \
+	libion.vendor
 	
 # Extras
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
