@@ -99,7 +99,7 @@ TARGET_KMODULES := true
 
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.mt6797
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/recovery.fstab
 
 # System Properties
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
