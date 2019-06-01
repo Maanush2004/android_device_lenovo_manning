@@ -38,6 +38,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-motorola
 # Stock Device props
 PRODUCT_BUILD_PROP_OVERRIDES += \
   PRODUCT_NAME=manning_retail \
-  BUILD_FINGERPRINT=lenovo/manning_retail/manning:8.0.0/OMB27.43-70/77:user/release-keys \
   PRIVATE_BUILD_DESC="manning_retail-user 8.0.0 OMB27.43-70 77 release-keys"
+  
+BUILD_FINGERPRINT=lenovo/manning_retail/manning:8.0.0/OMB27.43-70/77:user/release-keys
 
