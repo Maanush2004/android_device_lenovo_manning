@@ -31,7 +31,9 @@ PRODUCT_NAME			:= lineage_manning
 PRODUCT_BRAND			:= lenovo
 PRODUCT_MODEL			:= Lenovo K8 Note
 PRODUCT_MANUFACTURER	:= lenovo
-
+TARGET_VENDOR := lenovo
+TARGET_VENDOR_PRODUCT_NAME			:= manning
+TARGET_VENDOR_DEVICE_NAME		:= manning
 # Google client ID property.
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
@@ -40,5 +42,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
   PRODUCT_NAME=manning_retail \
   PRIVATE_BUILD_DESC="manning_retail-user 8.0.0 OMB27.43-70 77 release-keys"
   
-BUILD_FINGERPRINT=lenovo/manning_retail/manning:8.0.0/OMB27.43-70/77:user/release-keys
+BUILD_FINGERPRINT := lenovo/manning_retail/manning:8.0.0/OMB27.43-70/77:user/release-keys
 
