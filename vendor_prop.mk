@@ -142,6 +142,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.mtk_ps3_rat=W/G \
     mtk.vdec.waitkeyframeforplay=1 \
     ro.mtk_embms_support=1 \
+	ro.sys.sdcardfs=1 \
     debug.sf.disable_backpressure=1 \
     ro.ksc5601_write=0 \
     ro.email_support_ucs2=0 \
