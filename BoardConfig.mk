@@ -266,7 +266,8 @@ TARGET_CAMERASERVICE_CLOSES_NATIVE_HANDLES := true
 TARGET_USES_NON_TREBLE_CAMERA := true
 
 # HIDL Manifest
-DEVICE_MANIFEST_FILE := vendor/lenovo/manning/vendor/manifest.xml
+DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(LOCAL_PATH)/compatibility_matrix.xml
 
 # OTA assert
 TARGET_OTA_ASSERT_DEVICE := manning,manning_retail,xt1902-3,XT1902-3
