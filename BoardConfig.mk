@@ -105,6 +105,9 @@ TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/recovery.fstab
 BOARD_VNDK_VERSION := current
 BOARD_VNDK_RUNTIME_DISABLE := true
 
+# System Properties
+TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
+
 # Use mke2fs to create ext4 images
 TARGET_USES_MKE2FS := true
 
