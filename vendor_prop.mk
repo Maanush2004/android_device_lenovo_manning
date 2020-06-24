@@ -165,3 +165,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Bluetooth Fix on GSIs (Pie) (Temporarily)
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.sys.bt.unsupport.stdfeatures=000001
+	
+# Force disable software navigation keys
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.sys.phh.mainkeys=1
