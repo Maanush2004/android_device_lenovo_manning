@@ -162,10 +162,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	
 # Some props needed to make some features work in GSIs
 
-# Headphone jack fix until device overlay is implemented
-PRODUCT_PROPERTY_OVERRIDES += \
-	persist.sys.overlay.devinputjack=true
-
 # Bluetooth Fix on GSIs (Pie) (Temporarily)
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.sys.bt.unsupport.stdfeatures=000001
